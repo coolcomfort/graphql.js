@@ -38,6 +38,7 @@
       method, url, contentType, accept, headers, body, _onRequestError, callback
     ) {
       var xhr = new XMLHttpRequest
+      xhr.withCredentials = true;
       xhr.open(method, url, true)
       xhr.setRequestHeader('Content-Type', contentType)
       xhr.setRequestHeader('Accept', accept)
